@@ -1,0 +1,100 @@
+https://github.com/devopshydclub/vprofile-project/blob/prereqs/Prereqs_doc.md        s/w download link
+shft g - last line
+gg - first line
+vim
+vagrant init
+vagrant up
+vagrant ssh
+vagrant halt
+vagrant destroy
+cp
+mv
+ls
+touch
+cat
+yy - copy
+p-paste below
+P-paste above
+dd - copy and cut
+u-undo
+:set nu - to print line num in vim
+/text - matches the text word in file
+cmnd --help - to know about cmnd
+ln -s
+unlink
+ls -lt - longisting a/c time stamp latest on top
+head
+tail
+cut -d: -f1 /etc/passwd   -  used to print the text as we need if it is organaised in a specific format 
+awk -F ':' 'print $1' filepath
+sudo -i
+:%s/c/a    - replace one string per line
+:%s/c/a/g  - replace globally
+sed 's/c/a/g' * - just printing by replacing chars in multiple files globally
+sed -i 's/c/a/g' * - replacing
+free -m
+df -h
+uptime
+/dev/null
+1> and >> - output redirection
+2> - error redirection
+&>> - output and error both
+wc -l
+find /etc -name host*
+locate  - same as find but gives data in DB (execute updatedb before locate to be uptodate)
+
+/etc/passwd ->  root:x:0:0:root:/root:/bin/bash    -> (username:link to shadow file:userid:grpid:comment:home dir:login shell)
+/etc/passwd
+/etc/group
+useradd username
+groupadd grpname
+usermod -aG grpname username --- to add a user to a grp as a secondary user
+userdel -r username - to del user with home dir
+grpdel grpname
+lsof -- to know activity of users
+su - username
+sudo -i
+link file and original file may have different permissions
+chmod (u/g/o)(+/-)rwx file/dir - to change permissions
+chown -R user:grp file/dir - to change owner
+:q! - forcefull quit
+to use sudo under any user either we need to add him in /etc/sudoers file using visudo or we should create a file in /etc/sudoers.d by switching to root
+visudo
+rpm
+curl
+tree
+general process is we will search for the download link of package and copy it and we use in linux by using curl we access and then download it if there are any other dependencies we should download them too so instead of this we can use yum command and download the packages and this yum internally will look for packages in repos and download all the dependencies same as springboot
+\ is used to type command in 2 lines
+yum search - searching package
+yum remove
+yum install
+yum upgrade
+systemctl start/stop/reload/restart/status/is-active/is-enabled/enable service
+every service will stop automatically when we stop the vm and if we restart the vm we need to start the service again to avoid this if we enable then the service will start automatically at every boot
+httpd - web service 
+ps  - just prints the processes and its status that are running in the current terminal
+ps aux - displays more info about all the process state and resources usage at a particular instance
+top - the complete info about processes is displaced and its dynamic i.e info gets updated at regular intervals of time
+kill
+ps - lists process that are in present terminal session
+ps -e - lists all process foreground and background
+ps -f - lists all process in terminal session in full format with detailed info
+ps -ef - lists all processes foreground and background with full format
+tar -cvzf file.tar.gz file/dir
+tar -x archived_file
+zip
+unzip
+
+adduser - to create user with home dir in ubuntu we use adduser. by using useradd home dir will not get created
+export - cmnd is used to set environmental var
+export EDITOR=vim --- sets vim as default editor
+wget - to download from internet
+dpkg - to install the packages that downloaded using wget
+yum in redhat == apt in ubuntu
+rpm "  "      == dpkg "  "
+/etc/yum.repos.d == /etc/apt/sources.list
+yum upgrade == apt update
+apt install
+apt remove
+apt purge -- removes packages with all of its configurations
+
