@@ -97,4 +97,34 @@ yum upgrade == apt update
 apt install
 apt remove
 apt purge -- removes packages with all of its configurations
+in our system the vm boxes will be in ~/.vagrant.d/boxes
+
+we can create a synced folder where a folder can be accessed and manipulated by guest and host systems
+/vagrant ---> f/vagrant-vms/ubuntu
+we can do operations on guest os in /vagrant and changes will be done in in host system
+we can create our own synced dir by changing the configs in vagrant file
+to change hostname 1) /etc/hostname 2) hostname name_of_hostname
+centos - httpd |||| ubuntu - apache2
+
+to host a website in linux we need to put our project in /var/www/html the homepage need to be named as index.html
+
+to host a website by using automation we need to change the vagrant file and fill it with all the req commands in the inline scripts then while we run vagrant up all the necessary operation that we do manually will be done internally when the vm is created. 
+
+we can create multiple VM's by using a single vagrant file but we should mention the name of the vm while performing any operation
+vagrant up vmname
+vagrant halt "
+vagrant destroy "
+vagrant ssh  " 
+
+
+
+
+
+
+
+
+
+
+
+
 
